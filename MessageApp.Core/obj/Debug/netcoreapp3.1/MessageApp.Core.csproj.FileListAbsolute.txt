@@ -1,0 +1,8 @@
+C:\Users\jackd\source\repos\MessageApp\MessageApp.Core\bin\Debug\netcoreapp3.1\MessageApp.Core.deps.json
+C:\Users\jackd\source\repos\MessageApp\MessageApp.Core\bin\Debug\netcoreapp3.1\MessageApp.Core.dll
+C:\Users\jackd\source\repos\MessageApp\MessageApp.Core\obj\Debug\netcoreapp3.1\MessageApp.Core.AssemblyInfoInputs.cache
+C:\Users\jackd\source\repos\MessageApp\MessageApp.Core\obj\Debug\netcoreapp3.1\MessageApp.Core.AssemblyInfo.cs
+C:\Users\jackd\source\repos\MessageApp\MessageApp.Core\bin\Debug\netcoreapp3.1\MessageApp.Core.pdb
+C:\Users\jackd\source\repos\MessageApp\MessageApp.Core\obj\Debug\netcoreapp3.1\MessageApp.Core.dll
+C:\Users\jackd\source\repos\MessageApp\MessageApp.Core\obj\Debug\netcoreapp3.1\MessageApp.Core.pdb
+C:\Users\jackd\source\repos\MessageApp\MessageApp.Core\obj\Debug\netcoreapp3.1\MessageApp.Core.csprojAssemblyReference.cache

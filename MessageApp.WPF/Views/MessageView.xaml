@@ -1,0 +1,100 @@
+﻿<views:MvxWpfView x:Class="MessageApp.WPF.Views.MessageView"
+             xmlns:mvx="clr-namespace:MvvmCross.Platforms.Wpf.Binding;assembly=MvvmCross.Platforms.Wpf"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MessageApp.WPF.Views"
+             xmlns:views="clr-namespace:MvvmCross.Platforms.Wpf.Views;assembly=MvvmCross.Platforms.Wpf"
+             mc:Ignorable="d" 
+             d:DesignHeight="523.5" d:DesignWidth="887" Background="#46404d">
+    <Grid Margin="20">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width=".4*" MinWidth="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Border Margin="0 10 0 10" Grid.Row="0" Grid.Column="0">
+            <Button mvx:Bi.nd="Command CreateContactCommand" Style="{StaticResource ActionButton}">
+                Create a new contact
+            </Button>
+        </Border>
+
+        <Border Margin="0 0 0 10" Grid.Row="1" Grid.Column="0">
+            <TextBox Text="{Binding SearchQuery, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                     Style="{StaticResource TextInput}" />
+        </Border>
+
+        <ListView ItemsSource="{Binding Contacts}" Grid.Row="2" Grid.Column="0" Style="{StaticResource ContactList}"
+                  SelectedItem="{Binding SelectedItem, Mode=TwoWay}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding FullName}" Style="{StaticResource SmallStackText}"/>
+                        <TextBlock Text="{Binding Address}" Style="{StaticResource SmallStackText}"/>
+                        <TextBlock Text="{Binding PostCode}" Style="{StaticResource SmallStackText}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListView>
+
+        <ScrollViewer Grid.Column="1" Grid.Row="0" Grid.RowSpan="3" VerticalScrollBarVisibility="Auto">
+            <StackPanel Margin="20 0 20 0">
+                <TextBlock Text="Full Name" Style="{StaticResource ContactText}"/>
+                <TextBox Text="{Binding SelectedItem.FullName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                          Style="{StaticResource TextInput}"/>
+
+                <TextBlock Text="First line address" Style="{StaticResource ContactText}"/>
+                <TextBox Text="{Binding SelectedItem.Address, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                          Style="{StaticResource TextInput}"/>
+
+                <TextBlock Text="Town" Style="{StaticResource ContactText}"/>
+                <TextBox Text="{Binding SelectedItem.Town, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                         Style="{StaticResource TextInput}"/>
+
+                <TextBlock Text="Post Code" Style="{StaticResource ContactText}"/>
+                <TextBox Text="{Binding SelectedItem.PostCode, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                          Style="{StaticResource TextInput}"/>
+
+                <TextBlock Text="Mobile" Style="{StaticResource ContactText}"/>
+                <TextBox Text="{Binding SelectedItem.Mobile, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                         Style="{StaticResource TextInput}"/>
+
+                <TextBlock Text="Phone" Style="{StaticResource ContactText}"/>
+                <TextBox Text="{Binding SelectedItem.Phone, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                           Style="{StaticResource TextInput}"/>
+
+                <TextBlock Text="Email" Style="{StaticResource ContactText}"/>
+                <TextBox Text="{Binding SelectedItem.Email, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                           Style="{StaticResource TextInput}"/>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Border Margin="0 20 0 20" Grid.Column="0">
+                        <StackPanel>
+                            <Button Padding="5" mvx:Bi.nd="Command DeleteContactCommand" Style="{StaticResource ActionButton}">
+                                Delete Contact
+                            </Button>
+                        </StackPanel>
+                    </Border>
+                    <Border Margin="0 20 0 20" Grid.Column="2">
+                        <StackPanel>
+                            <Button Padding="5" mvx:Bi.nd="Command SaveContactCommand" Style="{StaticResource ActionButton}">
+                                Save Contact
+                            </Button>
+                        </StackPanel>
+                    </Border>
+                </Grid>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</views:MvxWpfView>

@@ -1,0 +1,45 @@
+﻿<views:MvxApplication
+    xmlns:views="clr-namespace:MvvmCross.Platforms.Wpf.Views;assembly=MvvmCross.Platforms.Wpf"
+    x:Class="MessageApp.WPF.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:MessageApp.WPF"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+
+        <Style TargetType="Button" x:Key="ActionButton">
+            <Setter Property="Background" Value="#2E2A33"/>
+            <Setter Property="Foreground" Value="#B0B0B0"/>
+            <Setter Property="BorderBrush" Value="#2E2A33"/>
+            <Setter Property="FontFamily" Value="Ariel Bold"/>
+            <Setter Property="FontSize" Value="18px"/>
+        </Style>
+
+        <Style TargetType="TextBox" x:Key="TextInput">
+            <Setter Property="Background" Value="#2E2A33"/>
+            <Setter Property="Foreground" Value="#B0B0B0"/>
+            <Setter Property="BorderBrush" Value="#2E2A33"/>
+            <Setter Property="FontFamily" Value="Ariel Bold"/>
+            <Setter Property="FontSize" Value="18px"/>
+        </Style>
+
+        <Style TargetType="ListView" x:Key="ContactList">
+            <Setter Property="Background" Value="#2E2A33"/>
+            <Setter Property="BorderBrush" Value="#2E2A33"/>
+        </Style>
+        
+        <Style TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#B0B0B0"/>
+            <Setter Property="FontFamily" Value="Ariel Bold"/>
+            <Setter Property="FontSize" Value="18px"/>
+        </Style>
+
+        <Style TargetType="TextBlock" x:Key="SmallStackText" BasedOn="{StaticResource {x:Type TextBlock}}">
+            <Setter Property="FontSize" Value="14px"/>
+        </Style>
+
+        <Style TargetType="TextBlock" x:Key="ContactText" BasedOn="{StaticResource {x:Type TextBlock}}">
+            <Setter Property="Margin" Value="0 10 0 0"/>
+        </Style>
+    </Application.Resources>
+</views:MvxApplication>

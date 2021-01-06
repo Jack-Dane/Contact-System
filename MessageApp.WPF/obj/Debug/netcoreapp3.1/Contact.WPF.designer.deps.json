@@ -1,0 +1,46 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "MvvmCross/7.0.1": {
+        "runtime": {
+          "lib/netcoreapp3.1/MvvmCross.dll": {
+            "assemblyVersion": "7.0.1.0",
+            "fileVersion": "7.0.1.0"
+          }
+        }
+      },
+      "MvvmCross.Platforms.Wpf/7.0.1": {
+        "dependencies": {
+          "MvvmCross": "7.0.1"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/MvvmCross.Platforms.Wpf.dll": {
+            "assemblyVersion": "7.0.1.0",
+            "fileVersion": "7.0.1.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MvvmCross/7.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2mXgbl2+G4WPf3zAQieDdI/kgkjndoxCR8VDWQUGySqnXKZ3xhuGuChcoeWWXhQKwk8QNiCbMWTP1p/edBQFTg==",
+      "path": "mvvmcross/7.0.1",
+      "hashPath": "mvvmcross.7.0.1.nupkg.sha512"
+    },
+    "MvvmCross.Platforms.Wpf/7.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QZice8dDex3Bq8PyGxMavKX/MJ9KFByTqGnd58dOR4fJadsaUQissGyHMKa+nqnP59pBt+WYoV+wuL/ueNn0aQ==",
+      "path": "mvvmcross.platforms.wpf/7.0.1",
+      "hashPath": "mvvmcross.platforms.wpf.7.0.1.nupkg.sha512"
+    }
+  }
+}
